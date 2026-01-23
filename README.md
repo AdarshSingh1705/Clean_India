@@ -1,7 +1,54 @@
-<h1 align="center">Clean My India</h1>
+<h1 align="center">Clean India</h1>
 <p align="center">Civic Issue Reporting Portal</p>
 
 A full-stack web application that allows citizens to report local issues (potholes, garbage, water leakage, etc.), track their status, and engage through likes and comments. Officials can update statuses and assign issues.
+
+<p align="center">
+<img alt="last-commit" src="https://img.shields.io/github/last-commit/AdarshSingh1705/clean_my_india?style=flat&amp;logo=git&amp;logoColor=white&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="repo-top-language" src="https://img.shields.io/github/languages/top/AdarshSingh1705/clean_my_india?style=flat&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="repo-language-count" src="https://img.shields.io/github/languages/count/AdarshSingh1705/clean_my_india?style=flat&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+</p>
+
+<p><i>Built with the tools and technologies:</i></p>
+<p >
+<img alt="Express" src="https://img.shields.io/badge/Express-066641.svg?style=flat&amp;logo=Express&amp;logoColor=green" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="JSON" src="https://img.shields.io/badge/JSON-000000.svg?style=flat&amp;logo=JSON&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?style=flat&amp;logo=Markdown&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Socket.io" src="https://img.shields.io/badge/Socket.io-010101.svg?style=flat&amp;logo=socketdotio&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="npm" src="https://img.shields.io/badge/npm-CB3837.svg?style=flat&amp;logo=npm&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt=".ENV" src="https://img.shields.io/badge/.ENV-ECD53F.svg?style=flat&amp;logo=dotenv&amp;logoColor=black" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&amp;logo=JavaScript&amp;logoColor=black" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="sharp" src="https://img.shields.io/badge/sharp-99CC00.svg?style=flat&amp;logo=sharp&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Leaflet" src="https://img.shields.io/badge/Leaflet-199900.svg?style=flat&amp;logo=Leaflet&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="React" src="https://img.shields.io/badge/React-61DAFB.svg?style=flat&amp;logo=React&amp;logoColor=black" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Cloudinary" src="https://img.shields.io/badge/Cloudinary-3448C5.svg?style=flat&amp;logo=Cloudinary&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Axios" src="https://img.shields.io/badge/Axios-5A29E4.svg?style=flat&amp;logo=Axios&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="YAML" src="https://img.shields.io/badge/YAML-CB171E.svg?style=flat&amp;logo=YAML&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="BREVO" src="https://img.shields.io/badge/BREVO-2A9B75.svg?style=flat&amp;logo=BREVO&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+</p>
+
+
+## Overview
+
+<p>Clean India is an open-source civic issue reporting platform that enables citizens to report, track, and resolve local problems efficiently. It combines a scalable backend, a dynamic React frontend, and AI-powered validation to foster community engagement and municipal accountability.</p>
+<p>Click Here to Open Website: <a href="https://clean-india-frontend.onrender.com" rel="nofollow"><strong><i>clean-india-frontend.onrender.com</i></strong></a></p>
+
+<p><strong>Why Clean India?</strong></p>
+
+<p>This project aims to streamline civic issue management through a robust, developer-friendly architecture. The core features include:</p>
+
+<ul class="list-disc pl-4 my-0">
+<li class="my-0">🧩 <strong>🔧 Modular Architecture:</strong> Seamless integration of backend APIs, frontend components, and database layers for scalable development.</li><br>
+  
+<li class="my-0">🚀 <strong>🌐 Real-Time Communication:</strong> Live updates, notifications, and socket-based interactions to keep users engaged.</li><br>
+
+<li class="my-0">🖼️ <strong>🤖 AI Validation:</strong> Image upload validation and waste classification to ensure relevant and accurate issue reporting.</li><br>
+
+<li class="my-0">🔐 <strong>🔑 Secure Authentication:</strong> Role-based access control, user management, and session handling for a safe user experience.</li><br>
+
+<li class="my-0">📧 <strong>✉️ Email Integration:</strong> Reliable notifications and alerts via Brevo SMTP service for effective communication.</li>
+</ul>
+
 
 ## 🚀 Features
 
@@ -45,7 +92,7 @@ clean-my-india/
 
 ## 📸 Screenshot
 
-<img width="1740" height="853" alt="Clean My India Dashboard" src="https://github.com/user-attachments/assets/98572a65-56bb-46de-9f52-60c9e4e4442e" />
+<img width="1713" height="813" alt="image" src="https://github.com/user-attachments/assets/adf4ae3d-869c-4bf0-8e09-30df54bbe692" />
 
 ## 🛠️ Tech Stack
 
@@ -107,8 +154,7 @@ npm start
 ```
 
 **URLs:**
-- Frontend: `http://localhost:3000`
-- Backend: `http://localhost:5000`
+- Website:  `https://clean-india-frontend.onrender.com`
 
 ## 🔑 API Endpoints
 
@@ -169,8 +215,16 @@ Contributions are welcome!
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📜 License
+📜 License
 
-MIT License © 2025
+This project is licensed under the MIT License.
+
+📧 Contact
+
+🌐 LinkedIn: www.linkedin.com/in/adarshsingh1705 
+
+🌐 LeetCode: https://leetcode.com/u/AdarshSingh1705/
+
+📧 Email: gfp.globalfootprints2024@gmail.com
 
 <p align="center">Designed and Developed with ❤️ by Adarsh Singh</p>
