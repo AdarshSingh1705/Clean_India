@@ -104,10 +104,14 @@ function AppContent() {
 }
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  // Check if splash was already shown in this session
+  const [showSplash, setShowSplash] = useState(() => {
+    return !sessionStorage.getItem('splashShown');
+  });
 
   const handleSplashFinish = () => {
-    setShowSplash(false); // This will hide the splash screen
+    sessionStorage.setItem('splashShown', 'true');
+    setShowSplash(false);
   };
 
   if (showSplash) {

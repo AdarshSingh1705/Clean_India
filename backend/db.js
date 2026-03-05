@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 // Load .env only in development; in production, use host env vars or Render dashboard
 if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
+  require('dotenv').config({ debug: false });
 }
 
 // Validate required environment variables
