@@ -76,6 +76,7 @@ A full-stack web platform empowering citizens to report, track, and resolve loca
 
 ## 📁 Project Structure
 
+```
 Clean_India/
 ├── backend/
 │   ├── middleware/        # Auth & error handling
@@ -95,6 +96,7 @@ Clean_India/
 │   └── production-setup-sql   # Database schema & seed
 ├── render.yaml            # Render deployment config
 └── README.md
+```
 
 ## 📸 Screenshot
 
