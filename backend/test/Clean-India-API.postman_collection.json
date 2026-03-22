@@ -1,7 +1,7 @@
 {
 	"info": {
-		"name": "Clean My India API",
-		"description": "Complete API collection for Clean My India - Civic Issue Reporting Portal",
+		"name": "Clean India API",
+		"description": "Complete API collection for Clean India - Civic Issue Reporting Portal",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"variable": [

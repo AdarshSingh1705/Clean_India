@@ -1,6 +1,6 @@
 # Clean My India - Backend API
 
-Backend server for Clean My India civic issue reporting platform.
+Backend server for Clean India civic issue reporting platform.
 
 ## 🚀 Quick Start
 
@@ -51,7 +51,7 @@ node test/test-db-connection.js
 
 ### Postman Testing
 
-Import `test/Clean-My-India-API.postman_collection.json` in Postman.
+Import `test/Clean-India-API.postman_collection.json` in Postman.
 See `test/POSTMAN_GUIDE.md` for details.
 
 ## 📁 Project Structure

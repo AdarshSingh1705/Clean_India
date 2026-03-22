@@ -1,7 +1,7 @@
 <h1 align="center">Clean India</h1>
 <p align="center">Civic Issue Reporting Portal</p>
 
-A full-stack web application that allows citizens to report local issues (potholes, garbage, water leakage, etc.), track their status, and engage through likes and comments. Officials can update statuses and assign issues.
+A full-stack web platform empowering citizens to report, track, and resolve local civic issues— transparently and in real-time.
 
 <p align="center">
 <img alt="last-commit" src="https://img.shields.io/github/last-commit/AdarshSingh1705/clean_my_india?style=flat&logo=git&logoColor=white&color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
@@ -29,7 +29,12 @@ A full-stack web application that allows citizens to report local issues (pothol
 
 ## Overview
 
-<p>Clean India is an open-source civic issue reporting platform that enables citizens to report, track, and resolve local problems efficiently. It combines a scalable backend, a dynamic React frontend, and AI-powered validation to foster community engagement and municipal accountability.</p>
+<p>Clean India changes that. It's an open-source civic issue reporting platform that bridges the gap between citizens and local government bodies. Citizens can report problems like potholes, garbage dumps, or water leakage — with GPS location and photo evidence — and track exactly what happens to their complaint in real-time.</p>
+
+<p>Officials get a dedicated panel to assign, manage, and resolve issues. Every status change is logged, timestamped, and visible to the public — creating genuine transparency and accountability.</p>
+
+> 💡 Built with a modular full-stack architecture, AI-powered image validation, real-time WebSocket communication, and role-based access control.
+
 <p>Click Here to Open Website: <a href="https://clean-india-frontend.onrender.com" rel="nofollow"><strong><i>clean-india-frontend.onrender.com</i></strong></a></p>
 
 <p><strong>Why Clean India?</strong></p>
@@ -71,25 +76,25 @@ A full-stack web application that allows citizens to report local issues (pothol
 
 ## 📁 Project Structure
 
-```
-clean-my-india/
-├── backend/              # Node.js + Express API
-│   ├── middleware/       # Auth & error handling
-│   ├── models/          # Database models
-│   ├── routes/          # API routes
-│   ├── services/        # Business logic
-│   ├── test/            # Testing files
-│   ├── server.js        # Entry point
-│   └── db.js           # Database connection
-├── frontend/            # React application
-│   ├── src/
-│   │   ├── components/  # Reusable components
-│   │   ├── contexts/    # React contexts
-│   │   ├── pages/       # Page components
-│   │   └── services/    # API services
-│   └── public/
+Clean_India/
+├── backend/
+│   ├── middleware/        # Auth & error handling
+│   ├── models/            # Database models
+│   ├── routes/            # API route definitions
+│   ├── services/          # Business logic layer
+│   ├── test/              # Postman collection & test scripts
+│   ├── server.js          # Entry point
+│   └── db.js              # Database connection
+├── frontend/
+│   └── src/
+│       ├── components/    # Reusable UI components
+│       ├── contexts/      # React context (auth, socket)
+│       ├── pages/         # Page-level components
+│       └── services/      # Axios API service layer
+├── database/
+│   └── production-setup-sql   # Database schema & seed
+├── render.yaml            # Render deployment config
 └── README.md
-```
 
 ## 📸 Screenshot
 
@@ -99,9 +104,10 @@ clean-my-india/
 
 **Frontend:**
 
-- React
+- React.js
 - Axios
 - TailwindCSS
+- Leaflet Maps
 
 **Backend:**
 
@@ -117,8 +123,8 @@ clean-my-india/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/clean-my-india.git
-cd clean-my-india
+git clone https://github.com/AdarshSingh1705/Clean-India.git
+cd Clean-India
 ```
 
 ### 2️⃣ Setup Backend
@@ -160,25 +166,29 @@ NODE_ENV=development
 Setup database:
 
 **Option 1: Using Aiven Console (Recommended)**
+
 1. Create free PostgreSQL service on [Aiven](https://aiven.io/)
 2. Copy connection details from Aiven dashboard
 3. Open Query Editor in Aiven Console
 4. Run SQL from `database/production-setup-sql`
 
 **Option 2: Using psql**
+
 ```bash
 psql "postgresql://avnadmin:password@host:port/defaultdb?sslmode=require" -f database/production-setup-sql
 ```
 
 **Option 3: Local PostgreSQL**
+
 ```bash
-psql -h localhost -U postgres -d clean_my_india -f database/production-setup-sql
+psql -h localhost -U postgres -d Clean-India -f database/production-setup-sql
 ```
 
 Start backend:
 
 ```bash
 npm start
+# API running at http://localhost:5000
 ```
 
 ### 3️⃣ Setup Frontend
@@ -193,7 +203,7 @@ npm start
 
 - Frontend: `http://localhost:3000`
 - Backend: `http://localhost:5000`
-- Production: `https://clean-india-frontend.onrender.com`
+- Production: `https://Clean-India-frontend.onrender.com`
 
 ## 🔑 API Endpoints
 
@@ -232,7 +242,7 @@ npm test
 
 ### Test with Postman
 
-Import `backend/test/Clean-My-India-API.postman_collection.json` in Postman.
+Import `backend/test/Clean-India-API.postman_collection.json` in Postman.
 See `backend/test/POSTMAN_GUIDE.md` for details.
 
 ### Test Database Connection
@@ -247,7 +257,7 @@ node backend/test/test-db-connection.js
 
 ```bash
 # Export local database
-pg_dump -h localhost -U postgres -d clean_my_india -f database/backup.sql
+pg_dump -h localhost -U postgres -d Clean-India -f database/backup.sql
 
 # Import to Aiven
 psql "postgresql://avnadmin:password@host:port/defaultdb?sslmode=require" -f database/backup.sql
