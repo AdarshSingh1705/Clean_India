@@ -27,9 +27,8 @@ const upload = multer({
   }
 });
 
-/**
- * ✅ Public: Get all issues
- */
+ // Public: Get all issues
+ 
 router.get('/', async (req, res) => {
   try {
     const { status, category, priority, page = 1, limit = 10 } = req.query;
@@ -106,10 +105,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-/**
- * ✅ Public: Get single issue by ID
- */
-router.get('/:id', async (req, res) => {
+ // Public: Get single issue by ID
+
+ router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -150,7 +148,7 @@ router.get('/:id', async (req, res) => {
       [id]
     );
 
-    // ✅ Default for non-logged-in users
+    // Default for non-logged-in users
     let userLiked = false;
 
     if (req.headers.authorization) {
@@ -182,9 +180,8 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-/**
- * ✅ Protected: Create new issue
- */
+  // Protected: Create new issue
+
 router.post('/', auth, upload.single('image'), async (req, res) => {
   try {
     console.log('Creating issue - req.body:', req.body);
@@ -332,9 +329,7 @@ router.post('/', auth, upload.single('image'), async (req, res) => {
   }
 });
 
-/**
- * ✅ Protected: Update status
- */
+
 // Separate multer for proof images (no file filter - ML verification handles validation)
 const proofUpload = multer({
   storage: multer.memoryStorage(),
@@ -438,7 +433,7 @@ router.patch('/:id/status', auth, isOfficial, proofUpload.single('proof_image'),
     }
 
     const io = req.app.get('io');
-    io.to(id).emit('issue-updated', updatedIssue.rows[0]);
+    io.to(`issue-${id}`).emit('issue-updated', updatedIssue.rows[0]);
 
     res.json({
       message: 'Issue status updated successfully',
@@ -450,9 +445,9 @@ router.patch('/:id/status', auth, isOfficial, proofUpload.single('proof_image'),
   }
 });
 
-/**
- * ✅ Protected: Assign issue
- */
+
+  //Protected: Assign issue
+
 router.patch('/:id/assign', auth, isOfficial, async (req, res) => {
   try {
     const { id } = req.params;
@@ -494,7 +489,7 @@ router.patch('/:id/assign', auth, isOfficial, async (req, res) => {
     }
 
     const io = req.app.get('io');
-    io.to(id).emit('issue-updated', updatedIssue.rows[0]);
+    io.to(`issue-${id}`).emit('issue-updated', updatedIssue.rows[0]);
 
     res.json({
       message: 'Issue assigned successfully',
@@ -506,9 +501,9 @@ router.patch('/:id/assign', auth, isOfficial, async (req, res) => {
   }
 });
 
-/**
- * ✅ Protected: Like an issue
- */
+
+ // Protected: Like an issue
+ 
 router.post('/:id/like', auth, async (req, res) => {
   try {
     const { id } = req.params;
@@ -540,9 +535,9 @@ router.post('/:id/like', auth, async (req, res) => {
   }
 });
 
-/**
- * ✅ Protected: Unlike an issue
- */
+
+  // Protected: Unlike an issue
+ 
 router.delete('/:id/like', auth, async (req, res) => {
   try {
     const { id } = req.params;
@@ -564,9 +559,9 @@ router.delete('/:id/like', auth, async (req, res) => {
   }
 });
 
-/**
- * ✅ Protected: Delete issue (creator or official only)
- */
+
+  // Protected: Delete issue (creator or official only)
+ 
 router.delete('/:id', auth, async (req, res) => {
   try {
     const { id } = req.params;
@@ -613,9 +608,9 @@ router.delete('/:id', auth, async (req, res) => {
   }
 });
 
-/**
- * ✅ Public: Increment share count
- */
+
+  // Public: Increment share count
+ 
 router.post('/:id/share', async (req, res) => {
   try {
     const { id } = req.params;
@@ -636,9 +631,8 @@ router.post('/:id/share', async (req, res) => {
   }
 });
 
-/**
- * ✅ Protected: Add comment
- */
+ // Protected: Add comment
+
 router.post('/:id/comment', auth, async (req, res) => {
   try {
     const { id } = req.params;

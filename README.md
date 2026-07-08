@@ -1,7 +1,7 @@
 <h1 align="center">Clean India</h1>
 <p align="center">Civic Issue Reporting Portal</p>
 
-A full-stack web platform empowering citizens to report, track, and resolve local civic issues— transparently and in real-time.
+A full-stack web platform empowering citizens to report, track, and resolve local civic issues— transparently and in real-time..
 
 <p align="center">
 <img alt="last-commit" src="https://img.shields.io/github/last-commit/AdarshSingh1705/clean_my_india?style=flat&logo=git&logoColor=white&color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
